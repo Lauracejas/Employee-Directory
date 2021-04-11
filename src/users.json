@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "picture": "https://randomuser.me/api/portraits/thumb/men/32.jpg",
+        "name": "Kris Smith",
+        "phone": "(699)-428-3610",
+        "email": "virgil.james@example.com",
+        "dob": "1994-10-1"
+    },
+    {
+        "id": 2,
+        "picture": "https://randomuser.me/api/portraits/thumb/women/52.jpg",
+        "name": "Lara Croft",
+        "phone": "(336)-428-5810",
+        "email": "lara@example.com",
+        "dob": "2000-6-10"
+    }
+]
