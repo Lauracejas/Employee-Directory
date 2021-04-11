@@ -1,15 +1,17 @@
 import React from "react";
 // import users from "../users.json";
-import "../assets/table.css"
+import "../assets/table.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSort } from "@fortawesome/free-solid-svg-icons";
 
-function Table({employees}) {
+function Table({employees, sortName}) {
     return (
 
 <table className="table">
   <thead>
     <tr>
       <th scope="col">Image</th>
-      <th scope="col">Name</th>
+      <th scope="col">Name <FontAwesomeIcon icon={faSort} onClick={() => sortName()}/></th>
       <th scope="col">Phone</th>
       <th scope="col">Email</th>
       <th scope="col">DOB</th>

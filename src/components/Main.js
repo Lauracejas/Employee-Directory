@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import Table from "./Table";
 import Navbar from "./Navbar";
-import API from "../utils/API"
+import API from "../utils/API";
+import { format } from 'date-fns'
 
 class Main extends Component {
-    state = { employees: [], filterEmployees: [] };
+    state = { employees: [], filterEmployees: [], sortData: "asc" };
 
     componentDidMount() {
         API.search().then((res) => {
@@ -16,7 +17,7 @@ class Main extends Component {
                     email: user.email,
                     phone: user.phone,
                     picture: user.picture.thumbnail,
-                    dob: user.dob.date,
+                    dob: format(new Date(user.dob.date), 'MM-dd-yyyy')
                 })),
                 filterEmployees: res.data.results.map((user) => ({
                     id: user.login.uuid,
@@ -24,7 +25,7 @@ class Main extends Component {
                     email: user.email,
                     phone: user.phone,
                     picture: user.picture.thumbnail,
-                    dob: user.dob.date,
+                    dob: format(new Date(user.dob.date), 'MM-dd-yyyy')
                 })),
             });
         })
@@ -46,12 +47,24 @@ class Main extends Component {
         this.setState({ filterEmployees: filteredList });
     };
 
+    sortName = () => {
+        this.state.filterEmployees.sort((a, b) => {
+            if (this.state.sortData === "asc") {
+                this.setState({sortData: "desc"});
+                return a.name.localeCompare(b.name)
+            }
+            this.setState({sortData: "asc"});
+            return b.name.localeCompare(a.name);
+        })
+    //   this.setState({filterEmployees: filteredList})
+    }
+
 
     render() {
         return (
             <>
                 <Navbar searchEmployee={this.searchEmployee} />
-                <Table employees={this.state.filterEmployees} />
+                <Table sortName={this.sortName} employees={this.state.filterEmployees} />
             </>
         )
     }
