@@ -12,7 +12,7 @@ function Header () {
     return (
         <div className="jumbotron jumbotronfluid"  style={styles.headerStyle}>
             <h1 className="d-flex justify-content-center">Employee Directory</h1>
-            <p className="d-flex justify-content-center">Click on each heading to filter or use the search box to narrow your results</p>
+            <p className="d-flex justify-content-center">Click on name heading to filter or use the search box to narrow your results</p>
         </div>
     )
 }
