@@ -1,6 +1,7 @@
 {
   "name": "employee-directory",
   "version": "0.1.0",
+  "homepage": "https://lauracejas.github.io/Employee-Directory/",
   "private": true,
   "dependencies": {
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
@@ -22,7 +23,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "homepage": "https://lauracejas.github.io/Employee-Directory/",
+    
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },

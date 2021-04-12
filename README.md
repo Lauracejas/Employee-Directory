@@ -48,7 +48,7 @@ SOFTWARE.
 - [react-fontawesome](https://fontawesome.com/how-to-use/on-the-web/using-with/react) I install this package to insert the icon beside the name and sort the names in order ascendent and descendent.
 
 ## Application
-[deployed-app]()
+[deployed-app](https://lauracejas.github.io/Employee-Directory/)
 
 ## Screenshot
 ![app](./src/assets/direct.JPG)
