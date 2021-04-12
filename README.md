@@ -10,7 +10,7 @@ For this assignment, I had to create an employee directory with React. This assi
   - [License](#license)
   - [Resources](#Resources)
   - [Application](#Application)
-  - [Screenshots](#Screenshots)
+  - [Screenshot](#Screenshot)
   - [Questions](#questions)
 
 ## Technologies
@@ -50,7 +50,7 @@ SOFTWARE.
 ## Application
 [deployed-app]()
 
-## Screenshots
+## Screenshot
 ![app](./src/assets/direct.JPG)
 
 
